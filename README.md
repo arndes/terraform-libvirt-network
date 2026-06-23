@@ -8,7 +8,7 @@ Creates a `libvirt_network` on a KVM hypervisor. Supports three modes: NAT, isol
 
 ```hcl
 module "net" {
-  source = "github.com/arndes/terraform-libvirt-network?ref=v0.1"
+  source = "github.com/arndes/terraform-libvirt-network?ref=v0.1.0"
 
   name         = "mynet"
   mode         = "nat"
@@ -21,7 +21,7 @@ module "net" {
 
 ```hcl
 module "net" {
-  source = "github.com/arndes/terraform-libvirt-network?ref=v0.1"
+  source = "github.com/arndes/terraform-libvirt-network?ref=v0.1.0"
 
   name         = "private"
   mode         = "isolated"
@@ -34,7 +34,7 @@ module "net" {
 
 ```hcl
 module "net" {
-  source = "github.com/arndes/terraform-libvirt-network?ref=v0.1"
+  source = "github.com/arndes/terraform-libvirt-network?ref=v0.1.0"
 
   name   = "bridged"
   mode   = "bridge"
