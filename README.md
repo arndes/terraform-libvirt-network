@@ -4,20 +4,16 @@ Creates a `libvirt_network` on a KVM hypervisor. Supports three modes: NAT, isol
 
 ## Usage
 
-### NAT network with DHCP
-
 ```hcl
 module "net" {
   source = "github.com/arndes/terraform-libvirt-network?ref=v0.1.0"
 
-  name         = "mynet"
-  mode         = "nat"
-  cidr         = "192.168.100.0/24"
-  dhcp_enabled = true
+  name = "mynet"
+  cidr = "192.168.100.0/24"
 }
 ```
 
-### Isolated network (static IPs, no DHCP)
+Isolated network (no DHCP, static IPs):
 
 ```hcl
 module "net" {
@@ -30,7 +26,7 @@ module "net" {
 }
 ```
 
-### Bridge network
+Bridge network:
 
 ```hcl
 module "net" {
